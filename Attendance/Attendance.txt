@@ -1,0 +1,4 @@
+StudentID: 2213110485
+Fullname(in English):  Natthaphong Matkhao 
+AKA : Boss
+ClassDetail: Lab Sheet 4 : String Methods and Defined Method  
