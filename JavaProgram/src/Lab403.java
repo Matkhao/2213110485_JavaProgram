@@ -11,10 +11,10 @@ public class Lab403 {
 			a++;
 		}
 		if (a==0) {
-			System.out.print("Nichi is a sentence");
+			System.out.print(message);
 		}
 		else {
-			System.out.print(message);
+			System.out.print("Nichi is a sentence");
 		}
 
 	}
