@@ -1,5 +1,5 @@
-Date : 12-Jan-2023
+Date : 19-Jan-2023
 StudentID: 2213110485
 Fullname(in English):  Natthaphong Matkhao 
 AKA : Boss
-ClassDetail:   GUI
+ClassDetail: Encapsulation
