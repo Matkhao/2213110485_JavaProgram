@@ -1,34 +1,64 @@
 
 public class Student {
-	//attributes
+	//The private instance variables
 	private String name;
-	private int score;
+	private String address;
+	//The course taken and grades for the courses are kept in 2 parallel arrays
+	private String[] courses;
+	private int[] grades; //valid range is [0-100]
+	private int numCourses; //Number of courses taken so far
+	private static final int MAX_COURSE = 30; //Maximum number of courses taken
 	
-	public void setName(String Name) {
-		name = Name;
+	public Student(String name,String address) {
+		this.name = name;
+		this.address = address;
+		courses = new String[MAX_COURSE];
+		grades = new int [MAX_COURSE];
+		numCourses = 0;
 	}
+	
+	// The public getters and setters.
+	// No setters for name as it is not designed to be changed.
 	
 	public String getName() {
-		return name;
+		return this.name;
 	}
 	
-	public void setScore(int Score) {
-		score = Score;
+	public String getAddress() {
+		return this.address;
 	}
-	public int getScore() {
-		return score;
-		
+	
+	public void setAddress(String address) {
+		this.address = address;
 	}
-	public boolean checkScore() {
-		if(score>=0 && score<=100)
-			return true;
-		else 
-			return false;
+	
+	public String toString() {
+		return getName() + " (" + getAddress() + ")";
 	}
-	public boolean isPass() {
-		if(score>=50) 
-			return true;
-		else 
-			return false;
+	
+	/**Adds a course and grade*/
+	public void addCourseGrade(String course , int grade) {
+		courses[numCourses] = course;
+		grades[numCourses] = grade;
+		++numCourses;
 	}
+	
+	/**Prints all course and their grades*/
+	public void printGrade() {
+		System.out.print(name);
+		for(int i=0;i<numCourses;i++) {
+			System.out.print(" " +courses[i]+":"+grades[i]);
+		}
+		System.out.println();
+	}
+	
+	/** Computes the average grade*/
+	public double getAverageGrade() {
+		int sum = 0; 
+		for(int i=0;i<numCourses;i++) {
+			sum += grades[i];
+		}
+		return (double)sum/numCourses;
+	}
+	
 }
