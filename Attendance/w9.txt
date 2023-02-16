@@ -1,5 +1,5 @@
-Date : 16-Feb-2023
+Date : 26-Jan-2023
 StudentID: 2213110485
 Fullname(in English):  Natthaphong Matkhao 
 AKA : Boss
-ClassDetail: Lab Sheet 12 : Exception + File (W / R)
+ClassDetail: Composition and Inheritance
